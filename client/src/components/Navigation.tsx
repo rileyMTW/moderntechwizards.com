@@ -11,9 +11,7 @@ export default function Navigation() {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/services", label: "Services" },
-    { path: "/products", label: "Products" },
-    { path: "/demo", label: "Demo" },
-    { path: "/custom", label: "Custom" },
+    { path: "/voice", label: "Voice Agents" },
     { path: "/about", label: "About" },
     { path: "/contact", label: "Contact" },
   ];
@@ -23,9 +21,9 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" data-testid="link-home-logo">
-            <img 
-              src={logoImage} 
-              alt="Modern Tech Wizards" 
+            <img
+              src={logoImage}
+              alt="Modern Tech Wizards"
               className="h-16 sm:h-20 w-auto hover-elevate active-elevate-2 cursor-pointer"
             />
           </Link>
@@ -36,7 +34,7 @@ export default function Navigation() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  data-testid={`link-${link.label.toLowerCase()}`}
+                  data-testid={`link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                   className={location === link.path ? "text-primary" : ""}
                 >
                   {link.label}
@@ -66,7 +64,7 @@ export default function Navigation() {
                   variant="ghost"
                   className={`w-full justify-start ${location === link.path ? "text-primary" : ""}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  data-testid={`mobile-link-${link.label.toLowerCase()}`}
+                  data-testid={`mobile-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   {link.label}
                 </Button>

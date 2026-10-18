@@ -102,7 +102,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="font-display text-2xl font-bold">Thank you for your interest!</h3>
                     <p className="text-muted-foreground max-w-md mx-auto">
-                      We'll be reaching out to you shortly to discuss your AI consulting needs.
+                      We'll be reaching out to you shortly to discuss how we can help.
                     </p>
                     <Button 
                       onClick={() => setIsSuccess(false)} 
@@ -217,12 +217,12 @@ export default function ContactPage() {
                 <CardTitle>Email Us</CardTitle>
               </CardHeader>
               <CardContent>
-                <a 
-                  href="mailto:riley@moderntechnology.com" 
+                <a
+                  href="mailto:riley@moderntechwizards.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   data-testid="text-contact-email"
                 >
-                  riley@moderntechnology.com
+                  riley@moderntechwizards.com
                 </a>
               </CardContent>
             </Card>

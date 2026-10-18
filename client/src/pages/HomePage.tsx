@@ -2,48 +2,48 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
-import { Bot, Clock, TrendingUp, Phone, Calendar, Zap } from "lucide-react";
+import { Brain, Cloud, Workflow, Phone, ArrowRight } from "lucide-react";
 import iconImage from "@assets/Gemini_Generated_Image_fzb2obfzb2obfzb2_1763412873745.png";
 
 export default function HomePage() {
   const features = [
     {
-      icon: Bot,
-      title: "AI Voice Agents",
-      description: "Intelligent agents that understand context, handle complex conversations, and provide human-like interactions 24/7."
+      icon: Brain,
+      title: "AI & LLM Systems",
+      description: "Applied AI that ships: LLM-powered apps, retrieval and agents, predictive models for scoring and classification, plus rigorous evaluation so you know it actually works."
     },
     {
-      icon: Clock,
-      title: "Marketing Automation",
-      description: "Smart outbound calls, SMS/email follow-ups, review requests, lead nurturing, and re-engagement campaigns designed to drive revenue and increase customer retention."
+      icon: Cloud,
+      title: "Cloud & Data Engineering",
+      description: "Architecture and hands-on build on Azure and AWS - serverless, data pipelines, and ETL - designed to scale, stay observable, and run reliably in production."
     },
     {
-      icon: TrendingUp,
-      title: "Revenue-Focused Automation",
-      description: "Creation and posting across major platforms — consistent, on-brand, and optimized for growth."
+      icon: Workflow,
+      title: "Integration & Automation",
+      description: "We connect your CRM, phone systems, and line-of-business tools into automated workflows that remove manual work and keep data flowing across every system."
     }
   ];
 
   const industries = [
-    "ALL INDUSTRIES","Mortgage", "Real Estate", "Dental", "Medical", 
-    "Insurance", "Home Services", "Legal", "Financial"
+    "Mortgage", "Insurance", "Lending", "Financial Services",
+    "Real Estate", "Healthcare", "Home Services", "Any complex operation"
   ];
 
   const steps = [
     {
       number: "01",
-      title: "Discover & Design",
-      description: "We analyze your workflow, identify automation opportunities, and design a custom AI solution."
+      title: "Discover & Architect",
+      description: "We reverse-engineer how your business actually works, pinpoint the highest-impact opportunities, and design a solution that fits your constraints - including compliance."
     },
     {
       number: "02",
-      title: "Train & Integrate",
-      description: "Your AI learns your business, integrates with your systems, and adapts to your specific needs."
+      title: "Build & Integrate",
+      description: "We write the production code and wire it into your existing systems - CRM, telephony, data platforms - instead of handing you a demo that never ships."
     },
     {
       number: "03",
-      title: "Launch & Optimize",
-      description: "Go live with full support, then continuously improve performance based on real data."
+      title: "Launch & Operate",
+      description: "We put it into production, measure the real result, and keep improving it - with monitoring, evaluation, and governance built in from day one."
     }
   ];
 
@@ -52,29 +52,29 @@ export default function HomePage() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-8">
-            <img 
-              src={iconImage} 
-              alt="Modern Tech Wizards Icon" 
+            <img
+              src={iconImage}
+              alt="Modern Tech Wizards Icon"
               className="h-40 w-40 rounded-full object-cover neon-border animate-pulse"
             />
           </div>
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 gradient-text" data-testid="text-hero-headline">
-            Modernize your business through advanced technological stradegy
+            Technology that goes to production and stays there
           </h1>
           <p className="text-xl sm:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto" data-testid="text-hero-subheadline">
-            We build next level automations and systems to improve customer service, customer aquisition and customer retention.
+            We are a technology consultancy that architects, builds, and operates production AI, cloud, data, and automation systems - end to end, including the hard parts like integration and compliance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="neon-glow-hover" data-testid="button-get-in-contact">
                 <Phone className="mr-2 h-5 w-5" />
-                Get in contact
+                Get in touch
               </Button>
             </Link>
-            <Link href="/products">
-              <Button size="lg" variant="outline" className="hover-elevate active-elevate-2" data-testid="button-explore-products">
-                <Zap className="mr-2 h-5 w-5" />
-                Explore Products
+            <Link href="/services">
+              <Button size="lg" variant="outline" className="hover-elevate active-elevate-2" data-testid="button-explore-services">
+                Explore services
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
@@ -83,9 +83,12 @@ export default function HomePage() {
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-4xl font-bold text-center mb-12" data-testid="text-what-we-do">
+          <h2 className="font-display text-4xl font-bold text-center mb-4" data-testid="text-what-we-do">
             What We Do
           </h2>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Senior, hands-on engineering across the full stack of modern technology - not slideware.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="glass-effect neon-glow-hover transition-all duration-300 hover:scale-105" data-testid={`card-feature-${index}`}>
@@ -101,20 +104,31 @@ export default function HomePage() {
               </Card>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link href="/services">
+              <Button variant="outline" className="hover-elevate active-elevate-2" data-testid="button-see-all-services">
+                See all services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-4xl font-bold text-center mb-12" data-testid="text-who-we-help">
+          <h2 className="font-display text-4xl font-bold text-center mb-4" data-testid="text-who-we-help">
             Who We Help
           </h2>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            We specialize in complex and regulated industries, where "the demo looked good" is not a result.
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
             {industries.map((industry, index) => (
-              <Badge 
-                key={index} 
-                variant="outline" 
-                className="text-base px-6 py-2 neon-border hover-elevate" 
+              <Badge
+                key={index}
+                variant="outline"
+                className="text-base px-6 py-2 neon-border hover-elevate"
                 data-testid={`badge-industry-${index}`}
               >
                 {industry}
@@ -127,7 +141,7 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-4xl font-bold text-center mb-16" data-testid="text-how-it-works">
-            How It Works
+            How We Work
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
@@ -140,6 +154,27 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <Card className="glass-effect text-center p-12 neon-border neon-glow">
+            <div className="max-w-2xl mx-auto space-y-6">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold gradient-text">
+                Have a hard technology problem?
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Tell us what you are trying to do. We will tell you honestly whether we can help, and how we would approach it.
+              </p>
+              <Link href="/contact">
+                <Button size="lg" className="neon-glow-hover" data-testid="button-cta-contact">
+                  Start a conversation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </Card>
         </div>
       </section>
     </div>
